@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workout Store - Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Floating label */
+    .input-group {
+      position: relative;
+    }
+    .input-group input,
+    .input-group textarea {
+      background: transparent;
+    }
+    .input-group label {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+      pointer-events: none;
+      transition: 0.3s ease;
+      background: white;
+      padding: 0 0.25rem;
+    }
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label,
+    .input-group textarea:focus + label,
+    .input-group textarea:not(:placeholder-shown) + label {
+      top: -0.6rem;
+      left: 0.8rem;
+      font-size: 0.75rem;
+      color: #ef4444;
+    }
+
+    /* Rating Stars */
+    .rating-stars {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      text-align: center;
+    }
+    .rating-stars > input {
+      display: none;
+    }
+    .rating-stars > label {
+      display: inline-block;
+      cursor: pointer;
+      color: #d1d5db;
+      font-size: 2rem;
+      transition: transform 0.2s, color 0.3s;
+    }
+    .rating-stars > input:checked ~ label,
+    .rating-stars > label:hover,
+    .rating-stars > label:hover ~ label {
+      color: #facc15;
+      transform: scale(1.2);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        transition: all 0.5s ease-in-out;
+        transform: translateX(100%);
+    }
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+  </style>
+</head>
+
+
+<body class="bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50 text-gray-700">
+
+
+    <header class="bg-gradient-to-r from-red-50 to-orange-100 py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/ff523b/ffffff?text=W" alt="Logo" class="rounded-full">
+                <span class="text-2xl font-bold text-gray-800">Workout<span class="text-red-500">Store</span></span>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center space-x-6 text-gray-700">
+                    <li><a href="page.html" class="hover:text-red-500 font-bold transition-colors">Home</a></li>
+                    <li><a href="product.html" class="hover:text-red-500 font-bold transition-colors">Products</a></li>
+                    <li><a href="about.html" class="hover:text-red-500 transition-colors">About</a></li>
+                    <li><a href="product.html" class="bg-red-500 text-white px-4 py-2 rounded-full font-medium shadow-md hover:bg-red-600 transition-colors">Shop Now</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-2xl text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
+            <div class="p-6">
+                <div class="flex justify-end">
+                    <button id="close-menu-btn" class="text-2xl text-gray-800 focus:outline-none">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col space-y-4 text-gray-700 mt-8">
+                     <li><a href="page.html" class="block py-2 px-4 hover:bg-gray-100 rounded-md font-bold">Home</a></li>
+                    <li><a href="product.html" class="block py-2 px-4 hover:bg-gray-100 rounded-md font-bold">Products</a></li>
+                    <li><a href="about.html" class="block py-2 px-4 hover:bg-gray-100 rounded-md">About</a></li>
+                    <li><a href="product.html" class="block mt-4 text-center bg-red-500 text-white px-4 py-2 rounded-full font-medium shadow-md hover:bg-red-600 transition-colors">Shop Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+  <!-- Contact Section -->
+  <section class="py-20 relative">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-12 relative">
+        Get in <span class="text-red-500">Touch</span>
+        <div class="w-20 h-1 bg-red-500 mx-auto mt-3 rounded-full"></div>
+      </h2>
+
+      <div class="backdrop-blur-lg bg-white/70 p-10 rounded-2xl shadow-2xl border border-gray-200 animate-fade-in">
+        <p class="text-center text-lg text-gray-600 mb-10">
+          Have questions or feedback? Fill out the form below and we’ll get back to you soon.
+        </p>
+
+        <form action="#" method="POST" class="space-y-8">
+          <!-- Full Name -->
+          <div class="input-group">
+            <input type="text" id="name" name="name" placeholder=" " required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-red-400 outline-none"/>
+            <label for="name">Full Name</label>
+          </div>
+
+          <!-- Email -->
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder=" " required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-red-400 outline-none"/>
+            <label for="email">Email Address</label>
+          </div>
+
+          <!-- Message -->
+          <div class="input-group">
+            <textarea id="message" name="message" rows="5" placeholder=" " required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-red-400 outline-none resize-none"></textarea>
+            <label for="message">Your Message</label>
+          </div>
+
+          <!-- Rating -->
+          <div class="border-t border-gray-200 pt-8">
+            <p class="block text-gray-700 font-semibold mb-4 text-center">Rate Your Experience (Optional)</p>
+            <div class="rating-stars">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit"
+            class="w-full py-4 px-6 rounded-full font-bold text-white shadow-lg bg-gradient-to-r from-red-500 via-pink-500 to-orange-500 hover:from-orange-500 hover:to-red-500 transition-all transform hover:scale-105 focus:ring-4 focus:ring-red-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-12 mt-20">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <!-- App -->
+      <div class="md:col-span-2">
+        <h3 class="text-xl font-bold text-white mb-4">Download Our App</h3>
+        <p class="mb-4">Get our app on Android and iOS devices.</p>
+        <div class="flex space-x-4">
+          <img src="https://placehold.co/140x45/000000/ffffff?text=Play+Store" class="w-32 cursor-pointer rounded-lg shadow-md hover:opacity-80"/>
+          <img src="https://placehold.co/140x45/000000/ffffff?text=App+Store" class="w-32 cursor-pointer rounded-lg shadow-md hover:opacity-80"/>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-xl font-bold text-white mb-4">Useful Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white transition">Coupons</a></li>
+          <li><a href="#" class="hover:text-white transition">Blog Post</a></li>
+          <li><a href="#" class="hover:text-white transition">Return Policy</a></li>
+          <li><a href="#" class="hover:text-white transition">Join Affiliate</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="text-center">
+    <h3 class="text-xl font-bold text-white mb-4">Follow Us</h3>
+    <ul class="space-y-2">
+        <li>
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="hover:text-white transition-colors">
+                <i class="fab fa-facebook-f mr-2"></i> Facebook
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-white transition-colors">
+                <i class="fab fa-twitter mr-2"></i> Twitter
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="hover:text-white transition-colors">
+                <i class="fab fa-instagram mr-2"></i> Instagram
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/@yourchannel" target="_blank" class="hover:text-white transition-colors">
+                <i class="fab fa-youtube mr-2"></i> YouTube
+            </a>
+        </li>
+    </ul>
+</div>
+
+    </div>
+    <hr class="border-gray-700 my-8" />
+    <p class="text-center text-gray-500">&copy; 2024 WorkoutStore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('show');
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.animate-fade-in').forEach(el => observer.observe(el));
+
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.add('open');
+      });
+
+      closeMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+          });
+      });
+    });
+  </script>
+</body>
+</html>
