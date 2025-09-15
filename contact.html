@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
-    /* Floating label */
+   
     .input-group {
       position: relative;
     }
@@ -37,7 +37,7 @@
       color: #ef4444;
     }
 
-    /* Rating Stars */
+ 
     .rating-stars {
       unicode-bidi: bidi-override;
       direction: rtl;
@@ -60,7 +60,7 @@
       transform: scale(1.2);
     }
 
-    /* Mobile Menu */
+  
     .mobile-menu {
         transition: all 0.5s ease-in-out;
         transform: translateX(100%);
@@ -82,7 +82,7 @@
                 <img src="https://placehold.co/40x40/ff523b/ffffff?text=W" alt="Logo" class="rounded-full">
                 <span class="text-2xl font-bold text-gray-800">Workout<span class="text-red-500">Store</span></span>
             </a>
-            <!-- Desktop Navigation -->
+         
             <nav class="hidden md:block">
                 <ul class="flex items-center space-x-6 text-gray-700">
                     <li><a href="page.html" class="hover:text-red-500 font-bold transition-colors">Home</a></li>
@@ -91,7 +91,7 @@
                     <li><a href="product.html" class="bg-red-500 text-white px-4 py-2 rounded-full font-medium shadow-md hover:bg-red-600 transition-colors">Shop Now</a></li>
                 </ul>
             </nav>
-            <!-- Mobile Menu Button -->
+          
             <div class="md:hidden">
                 <button id="mobile-menu-btn" class="text-2xl text-gray-800 focus:outline-none">
                     <i class="fas fa-bars"></i>
@@ -99,7 +99,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
             <div class="p-6">
                 <div class="flex justify-end">
@@ -117,7 +116,7 @@
         </div>
     </header>
 
-  <!-- Contact Section -->
+  
   <section class="py-20 relative">
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-12 relative">
@@ -131,28 +130,27 @@
         </p>
 
         <form action="#" method="POST" class="space-y-8">
-          <!-- Full Name -->
+      
           <div class="input-group">
             <input type="text" id="name" name="name" placeholder=" " required
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-red-400 outline-none"/>
             <label for="name">Full Name</label>
           </div>
 
-          <!-- Email -->
+      
           <div class="input-group">
             <input type="email" id="email" name="email" placeholder=" " required
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-red-400 outline-none"/>
             <label for="email">Email Address</label>
           </div>
 
-          <!-- Message -->
+         
           <div class="input-group">
             <textarea id="message" name="message" rows="5" placeholder=" " required
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-red-400 outline-none resize-none"></textarea>
             <label for="message">Your Message</label>
           </div>
 
-          <!-- Rating -->
           <div class="border-t border-gray-200 pt-8">
             <p class="block text-gray-700 font-semibold mb-4 text-center">Rate Your Experience (Optional)</p>
             <div class="rating-stars">
@@ -169,7 +167,7 @@
             </div>
           </div>
 
-          <!-- Submit -->
+        
           <button type="submit"
             class="w-full py-4 px-6 rounded-full font-bold text-white shadow-lg bg-gradient-to-r from-red-500 via-pink-500 to-orange-500 hover:from-orange-500 hover:to-red-500 transition-all transform hover:scale-105 focus:ring-4 focus:ring-red-300">
             Send Message
@@ -179,10 +177,10 @@
     </div>
   </section>
 
-  <!-- Footer -->
+
   <footer class="bg-gray-800 text-gray-400 py-12 mt-20">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-      <!-- App -->
+    
       <div class="md:col-span-2">
         <h3 class="text-xl font-bold text-white mb-4">Download Our App</h3>
         <p class="mb-4">Get our app on Android and iOS devices.</p>
@@ -192,7 +190,7 @@
         </div>
       </div>
 
-      <!-- Links -->
+  
       <div>
         <h3 class="text-xl font-bold text-white mb-4">Useful Links</h3>
         <ul class="space-y-2">
@@ -203,7 +201,7 @@
         </ul>
       </div>
 
-      <!-- Social -->
+    
       <div class="text-center">
     <h3 class="text-xl font-bold text-white mb-4">Follow Us</h3>
     <ul class="space-y-2">
@@ -245,7 +243,7 @@
 
       document.querySelectorAll('.animate-fade-in').forEach(el => observer.observe(el));
 
-      // Mobile menu functionality
+    
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const closeMenuBtn = document.getElementById('close-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
